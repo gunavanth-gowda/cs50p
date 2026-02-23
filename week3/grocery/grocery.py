@@ -4,9 +4,9 @@ while True:
     try:
         item = input()
         if item in items:
-            items[item]+=1
+            items[item] += 1
         else:
-            items[item]=1
+            items[item] = 1
     except EOFError:
         break
 

@@ -1,7 +1,7 @@
 while True:
     fraction = input("Fraction: ")
     try:
-        x,y = fraction.split("/")
+        x, y = fraction.split("/")
         x = int(x)
         y = int(y)
         if y == 0:
@@ -15,7 +15,7 @@ while True:
     except ZeroDivisionError:
         continue
     else:
-        fuel_percentage = float(x/y)
+        fuel_percentage = float(x / y)
         if fuel_percentage <= 0.01:
             print("E")
         elif fuel_percentage >= 0.99:

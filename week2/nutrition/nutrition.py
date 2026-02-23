@@ -18,7 +18,7 @@ fruit_calories = {
     "strawberries": 50,
     "sweet cherries": 100,
     "tangerine": 50,
-    "watermelon": 80
+    "watermelon": 80,
 }
 
 fruit = input("Item:").lower()

@@ -10,7 +10,7 @@ months = [
     "September",
     "October",
     "November",
-    "December"
+    "December",
 ]
 
 
@@ -40,5 +40,5 @@ def validate(month, day):
     return month in range(1, 13) and int(day) in range(1, 32)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
