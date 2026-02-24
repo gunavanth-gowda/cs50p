@@ -1,12 +1,11 @@
 def main():
     while True:
+        fraction = input("Fraction: ")
         try:
-            fraction = input("Fraction: ")
-            percentage = convert(fraction)
-            print(gauge(percentage))
+            print(gauge(convert(fraction)))
             break
         except (ValueError, ZeroDivisionError):
-            pass
+            continue
 
 
 def convert(fraction):
@@ -14,7 +13,7 @@ def convert(fraction):
         x, y = fraction.split("/")
         x = int(x)
         y = int(y)
-    except ValueError:
+    except (ValueError, AttributeError):
         raise ValueError
 
     if y == 0:
@@ -23,7 +22,7 @@ def convert(fraction):
     if x < 0 or y < 0 or x > y:
         raise ValueError
 
-    return round((x / y) * 100)
+    return int(round((x / y), 2) * 100)
 
 
 def gauge(percentage):

@@ -2,11 +2,16 @@ from fuel import convert, gauge
 import pytest
 
 
-def test_convert_valid():
+def test_convert_valid_whole():
     assert convert("1/2") == 50
     assert convert("3/4") == 75
     assert convert("0/1") == 0
     assert convert("1/1") == 100
+
+
+def test_convert_valid_rounded():
+    assert convert("1/3") == 33
+    assert convert("2/3") == 67
 
 
 def test_convert_invalid():
