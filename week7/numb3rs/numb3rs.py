@@ -9,9 +9,9 @@ def validate(ip):
     regex = r"(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)"
     pattern = rf"^(?:{regex}\.){{3}}{regex}$"
     if not re.match(pattern, ip):
-        return "False"
+        return False
     else:
-        return "True"
+        return True
 
 
 if __name__ == "__main__":
